@@ -103,7 +103,7 @@ const Home = () => {
                       <button className="w-[145px] h-[40px] flex p-[8px] p-[16px] justify-center items-center gap-[8px] bg-[#FAFAFA] rounded-lg text-sm font-inter font-medium leading-4">
                        <Play className="w-4 h-4" />
                        <p className="decoration-[#18181B] font-inter text-[14px] not-italic font-medium leading-[20px]">Watch Trailer</p>
-                      </button>
+                      </button class>
                     </div>
                   </CardContent>
                 </Card>
