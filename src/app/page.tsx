@@ -1,65 +1,136 @@
+"use client";
+import { use } from "react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import MovieCard from "@/components/ui/MovieCard";
+import { Play, Star } from "lucide-react";
 
-export default function Home() {
+
+const Home = () => {
+   const moviesData = [
+    {
+      id: 1,
+      image: "/Slide 4_3 - 1.png",
+      title: "Dear Santa",
+      rating: 6.9
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (1).png",
+      title: "How To Train Your Dragon Live Action",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (2).png",
+      title: "Alien Romulus",
+      rating: 7.5
+    },
+     {
+      id: 2,
+      image: "/Slide 4_3 - 1 (3).png",
+      title: "From the Ashes",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (4).png",
+      title: "Space Dogg",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (5).png",
+      title: "The order",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (6).png",
+      title: "Y2K",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (7).png",
+      title: "Solo Leveling: ReAwakening",
+      rating: 7.5
+    },
+    {
+      id: 2,
+      image: "/Slide 4_3 - 1 (8).png",
+      title: "Get Away",
+      rating: 7.5
+    },
+     {
+      id: 2,
+      image: "/Slide 4_3 - 1 (9).png",
+      title: "Sonic the Hedgehog 3",
+      rating: 7.5
+    },
+    
+    
+    
+  ]
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="w-full h-[4000px] flex flex-col gap-8">
+      <Carousel className="w-full h-unique-carousel-container relative">
+      <CarouselContent>
+        {Array.from({ length: 5 }).map((_, index) => {
+          return (
+            <CarouselItem key={index} className="basis-full">
+              <div className="p-1">
+                <Card>
+                  <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-xl relative">
+                    <Image src={"/Feature.png"} alt="Feature image" fill className="object-cover priority={index === 0}" />
+                    <span className="absolute bottom-4 left-4 text-4xl font-semibold text-white drop-shadow-md">{index + 1}</span>
+                    <div className="w-[404px] h-[264px] flex flex-col items-start gap-4 absolute left-[140px] bottom-[158px]">
+                      <div className="text-white">
+                        <p className=" font-inter decoration-[#FFFFFF] text-[16px]; not-italic font-normal leading-[24px]">Now Playing:</p>
+                        <h4 className="decoration-[#FFF] font-inter font-bold text-[36px] font-normal leading-[40px] tracking-[-0.9px]">Wicked</h4>
+                        <div className="flex gap-1 items-center">
+                          <Star fill="yellow" stroke="yellow" width={28} height={28} />
+
+                          <span className=" decoration-[#FAFAFA] font-inter text-[18px] not-italic font-normal leading-[28px]">6.9</span>
+                          <span className="decoration-[#71717A] font-inter text-[16px] not-italic font-normal leading-[24px]">/10</span>
+                        </div>
+                      </div>
+                      <p className="text-white w-[302px] decoration-[#FAFAFA] text-xs font-inter font-normal leading-4">
+                        Elphaba, a misunderstood young woman because of her green skin, and Glinda, a popular girl, become friends at Shiz University in the Land of Oz. After an encounter with the Wonderful Wizard of Oz, their friendship reaches a crossroads.
+                      </p>
+                      <button className="w-[145px] h-[40px] flex p-[8px] p-[16px] justify-center items-center gap-[8px] bg-[#FAFAFA] rounded-lg text-sm font-inter font-medium leading-4">
+                       <Play className="w-4 h-4" />
+                       <p className="decoration-[#18181B] font-inter text-[14px] not-italic font-medium leading-[20px]">Watch Trailer</p>
+                      </button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          );
+        })}
+      </CarouselContent>
+      <CarouselPrevious className="left-4"/>
+      <CarouselNext className="right-4"/>
+    </Carousel>
+        {/* 230 * 5 = 1150 + 16 * 4 = 1214d */}
+        <div className="flex flex-wrap  justify-center gap-4 w-[1214px] mx-auto">
+        {moviesData.map((item) => (
+          <MovieCard
+          key={item.id}
+          image={item.image}
+          title={item.title}
+          rating={item.rating}
+          />
+        ))}
+      </div>
+
     </div>
+    
+    
   );
 }
+export default Home;
+
