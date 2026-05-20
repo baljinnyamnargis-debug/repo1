@@ -11,7 +11,9 @@ interface MovieCardProps {
 
 const MovieCard = ({ image, title, rating }: MovieCardProps) => {
   return (
-    <div className="flex flex-col gap-[32px] items-start">
+
+
+    // 
         <Card className="w-[230px] h-[439px] flex flex-col rounded-lg bg-[#F4F4F5]">
     <CardContent className="flex flex-col gap-2 p-0">
       <div className="w-[230px] h-[340px] relative">
@@ -31,7 +33,8 @@ const MovieCard = ({ image, title, rating }: MovieCardProps) => {
       </div>
     </CardContent>
 </Card>
-    </div>
+    
+    
   );
      
   }
