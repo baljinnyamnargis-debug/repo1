@@ -20,7 +20,7 @@
     ],
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/lightwind/card": ["./src/components/card.tsx"]
+      "@/components/lightswind/card": ["./src/components/ui/card.tsx"]
     }
   },
   "include": [
