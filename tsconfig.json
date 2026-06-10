@@ -19,8 +19,7 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-      "@/components/lightswind/card": ["./src/components/ui/card.tsx"]
+      "@/*": ["./src/*"]
     }
   },
   "include": [
