@@ -64,7 +64,7 @@ const Upcoming = () => {
 
   const visiblePages = getVisiblePages();
 
-  const formatCategoryName = (category: string | string[]) => {
+  const formatCategoryName = (category: string | string[] | undefined) => {
     if (!category || typeof category !== "string") return "";
     return category
       .replace(/_/g, " ")

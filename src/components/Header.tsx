@@ -1,8 +1,6 @@
 "use client";
 import Image from "next/image";
 import { ToggleTheme } from "@/components/lightswind/toggle-theme";
-import Input from "@/components/ui/Input";
-import { Search } from "lucide-react";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import {
