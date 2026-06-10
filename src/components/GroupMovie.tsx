@@ -26,8 +26,7 @@ export const GroupMovie = ({ title, endpoint }: GroupMovieProps) => {
         `https://api.themoviedb.org/3/movie/${endpoint}?language=en-US&page=1`,
         {
           headers: {
-            Authorization:
-              `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
+            Authorization: `Bearer ${process.env.NEXT_PUBLIC_TMDB_TOKEN}`,
           },
         },
       )
