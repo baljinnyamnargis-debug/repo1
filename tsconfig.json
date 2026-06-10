@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/lightswind/card": ["./src/components/ui/card.tsx"],
+      "@/components/lib/utils": ["./src/lib/utils.ts"]
     }
   },
   "include": [
