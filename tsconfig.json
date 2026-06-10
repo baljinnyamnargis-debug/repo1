@@ -19,7 +19,8 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@/components/lib/utils": ["./src/lib/utils.ts"]
     }
   },
   "include": [
