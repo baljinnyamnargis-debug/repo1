@@ -15,7 +15,7 @@ const MovieCard = ({ movie }: { movie: movieType }) => {
               alt="Card-image"
               fill
               className="object-cover"
-            />
+            /> 
           </div>
           <div className="p-4 flex flex-col gap-1">
             <p className="flex gap-1 items-center">
